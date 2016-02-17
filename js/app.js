@@ -25,38 +25,15 @@ $(document).ready(function(){
         currentGameState.secretNumber = Math.floor((Math.random() * 100) + 1);
     }
     
+    /*---Get the user's number input and add it to the currentGameState object.---*/
     $('#guessButton').click(function(evt) {
         evt.preventDefault();
         var numberAsString = $('#userGuess').val();
-        userNumber = Number(numberAsString);
-        console.log(userNumber);
+        currentGameState.userNumber = Number(numberAsString);
+        console.log(currentGameState);
         debugger;
     });
+    
+
 
 });
-
-
-
-//    $('.button').submit(function(evt) {
-//        evt.preventDefault();
-//        debugger;
-//        $('#userGuess').change(function() {
-//            debugger;
-//            var numberAsString = $('#userGuess').val();
-//            userNumber = parseInt(numberAsString, 10);
-//            console.log(numberAsString);
-//            currentGameState.userNumber = userNumber;
-//        });
-//    });
-
-//    function userGuess() {  
-//        $('#userGuess').change(function() { //add event listener for preventDefault.
-//            //evt.preventDefault();
-//            var numberAsString = $('#userGuess').val(); //get the value of the userGuess box and make sure it's an int
-//            userNumber = parseInt(numberAsString, 10);
-//            
-//            
-//            currentGameState.userNumber = userNumber; //assign the guess to the currentGameState
-//        });
-
-
