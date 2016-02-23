@@ -1,7 +1,7 @@
-var currentGameState = {};
+
 
 $(document).ready(function(){
-	
+	var currentGameState = {};
     var userNumber; //the value the user enters
     
     startGame(); //start the game on load
